@@ -1,123 +1,153 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CarWash App - Project 1</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CarWash App - Project 1</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    body {
+      background-color: #f9fafe;
+    }
+
+    section h2 {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    img.img-fluid {
+      transition: transform 0.4s ease-in-out;
+    }
+
+    img.img-fluid:hover {
+      transform: scale(1.03);
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="../index.html">Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../index.html#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../index.html#contact">Contact</a></li>
-                </ul>
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+
+  <script>
+    fetch('../componens/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      });
+  </script>
+
+  <!-- Header -->
+  <header class="text-center py-5" style="background: linear-gradient(to right, #2b4f81, #3c6e91); color: white;" data-aos="fade-down">
+    <h1 class="display-4">CarWash App</h1>
+    <p class="lead">Aplikasi pemesanan cuci mobil berbasis web & mobile</p>
+    <img src="../images/carwash.jpg" alt="CarWash App" class="img-fluid rounded mt-4" width="600" />
+  </header>
+
+  <!-- Deskripsi Proyek -->
+  <section class="container py-5" data-aos="fade-up">
+    <h2>📌 Deskripsi Proyek</h2>
+    <p>
+      CarWash App adalah aplikasi berbasis web dan mobile yang memudahkan pelanggan dalam memesan layanan cuci mobil secara online. 
+      Dengan fitur pemesanan berbasis lokasi, pelanggan bisa memilih tempat cuci mobil terdekat, memilih paket layanan, serta melihat status cuci mobil secara real-time.
+    </p>
+  </section>
+
+  <!-- Fitur Utama -->
+  <section class="bg-light py-5">
+    <div class="container" data-aos="fade-up">
+      <h2>🚀 Fitur Utama</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">🔍 Pemesanan Online</h5>
+              <p class="card-text">Pelanggan bisa memesan layanan cuci mobil dengan mudah melalui aplikasi.</p>
             </div>
+          </div>
         </div>
-    </nav>
-
-    <!-- Header -->
-    <header class="bg-light text-center py-5">
-        <h1 class="display-4">CarWash App</h1>
-        <p class="lead">Aplikasi pemesanan cuci mobil berbasis web & mobile</p>
-        <img src="../images/carwash.jpg" alt="CarWash App" class="img-fluid rounded" width="600">
-    </header>
-
-    <!-- Deskripsi Proyek -->
-    <section class="container py-5">
-        <h2>📌 Deskripsi Proyek</h2>
-        <p>
-            CarWash App adalah aplikasi berbasis web dan mobile yang memudahkan pelanggan dalam memesan layanan cuci mobil secara online. 
-            Dengan fitur pemesanan berbasis lokasi, pelanggan bisa memilih tempat cuci mobil terdekat, memilih paket layanan, serta melihat status cuci mobil secara real-time.
-        </p>
-    </section>
-
-    <!-- Fitur Utama -->
-    <section class="bg-light py-5">
-        <div class="container">
-            <h2>🚀 Fitur Utama</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">🔍 Pemesanan Online</h5>
-                            <p class="card-text">Pelanggan bisa memesan layanan cuci mobil dengan mudah melalui aplikasi.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">📍 Lokasi Terdekat</h5>
-                            <p class="card-text">Menampilkan daftar tempat cuci mobil terdekat berdasarkan GPS pengguna.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">📊 Tracking Status</h5>
-                            <p class="card-text">Pelanggan bisa melihat status mobil mereka dalam proses pencucian.</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">📍 Lokasi Terdekat</h5>
+              <p class="card-text">Menampilkan daftar tempat cuci mobil terdekat berdasarkan GPS pengguna.</p>
             </div>
+          </div>
         </div>
-    </section>
-
-    <!-- Teknologi yang Digunakan -->
-    <section class="container py-5">
-        <h2>🛠 Teknologi yang Digunakan</h2>
-        <ul>
-            <li><strong>Frontend:</strong> HTML, CSS, JavaScript, Bootstrap</li>
-            <li><strong>Backend:</strong> Laravel (PHP)</li>
-            <li><strong>Database:</strong> MySQL</li>
-            <li><strong>API:</strong> Google Maps API (untuk lokasi cuci mobil)</li>
-            <li><strong>Mobile App:</strong> Kotlin (Android) & Flutter (Cross-Platform)</li>
-        </ul>
-    </section>
-
-    <!-- Galeri Screenshot -->
-    <section class="bg-light py-5">
-        <div class="container">
-            <h2>🖼 Galeri Screenshot</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="../images/carwash-dashboard.jpg" class="img-fluid rounded mb-3" alt="Dashboard">
-                </div>
-                <div class="col-md-6">
-                    <img src="../images/carwash-order.jpg" class="img-fluid rounded mb-3" alt="Order Page">
-                </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">📊 Tracking Status</h5>
+              <p class="card-text">Pelanggan bisa melihat status mobil mereka dalam proses pencucian.</p>
             </div>
+          </div>
         </div>
-    </section>
-
-    <!-- Link ke Repo GitHub -->
-    <section class="container text-center py-5">
-        <h2>🔗 Kunjungi Proyek</h2>
-        <p>Lihat kode sumber proyek ini di GitHub:</p>
-        <a href="https://github.com/RaisulAp/carwash-app" class="btn btn-primary" target="_blank">Lihat di GitHub</a>
-    </section>
-
-    <!-- Kembali ke Halaman Utama -->
-    <div class="text-center mb-5">
-        <a href="../index.html" class="btn btn-secondary">🔙 Kembali ke Portofolio</a>
+      </div>
     </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="text-center text-white bg-primary py-3">
-        <p>&copy; 2025 Raisul Agung Prabankoro</p>
-    </footer>
+  <!-- Teknologi yang Digunakan -->
+  <section class="container py-5" data-aos="fade-up">
+    <h2>🛠 Teknologi yang Digunakan</h2>
+    <ul>
+      <li><strong>Frontend:</strong> HTML, CSS, JavaScript, Bootstrap</li>
+      <li><strong>Backend:</strong> Laravel (PHP)</li>
+      <li><strong>Database:</strong> MySQL</li>
+      <li><strong>API:</strong> Google Maps API (untuk lokasi cuci mobil)</li>
+      <li><strong>Mobile App:</strong> Kotlin (Android) & Flutter (Cross-Platform)</li>
+    </ul>
+  </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Galeri Screenshot -->
+  <section class="bg-light py-5">
+    <div class="container" data-aos="fade-up">
+      <h2>🖼 Galeri Screenshot</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="../images/carwash-dashboard.jpg" class="img-fluid rounded mb-3" alt="Dashboard" />
+        </div>
+        <div class="col-md-6">
+          <img src="../images/carwash-order.jpg" class="img-fluid rounded mb-3" alt="Order Page" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Link ke Repo GitHub -->
+  <section class="container text-center py-5" data-aos="zoom-in">
+    <h2>🔗 Kunjungi Proyek</h2>
+    <p>Lihat kode sumber proyek ini di GitHub:</p>
+    <a href="https://github.com/RaisulAp/carwash-app" class="btn btn-primary" target="_blank">Lihat di GitHub</a>
+  </section>
+
+  <!-- Kembali ke Halaman Utama -->
+  <div class="text-center mb-5" data-aos="fade-up">
+    <a href="../index.html" class="btn btn-secondary">🔙 Kembali ke Portofolio</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-white bg-primary py-3">
+    <p>&copy; 2025 Raisul Agung Prabankoro</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

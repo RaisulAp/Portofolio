@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customer Billing Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<div id="navbar-placeholder"></div>
+<script>
+  fetch('../componens/navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+    });
+</script>
+
+<!-- Header -->
+<header class="bg-light text-center py-5" style="background: linear-gradient(to right, #2b4f81, #3c6e91); color: white;" data-aos="fade-down">
+  <h1 class="display-4">Customer Billing Website for ISP</h1>
+  <p class="lead">A responsive web application for managing customer billing and notifications</p>
+  <img src="../images/home-project3.jpg" alt="Customer Billing Web" class="img-fluid rounded" width="600">
+</header>
+
+<!-- Deskripsi Proyek -->
+<section class="container py-5" data-aos="fade-up">
+  <h2>📌 Project Overview</h2>
+  <p>
+    This project is a full-stack web application built for an Internet Service Provider to handle customer billing,
+    payment tracking, and notification delivery. The system was developed using <strong>Laravel</strong> for the backend
+    and integrates with <strong>Firebase Cloud Messaging</strong> to send real-time push notifications.
+    The UI was first designed using <strong>Figma</strong> and then implemented using Blade templates with
+    <strong>Tailwind CSS</strong> and Bootstrap.
+  </p>
+</section>
+
+<!-- Fitur Utama -->
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 data-aos="fade-right">🧩 Key Features</h2>
+    <div class="row">
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">📬 Customer Billing System</h5>
+            <p class="card-text">Handles multiple billing accounts per customer, with dynamic tracking and history view.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">🔔 Push Notifications</h5>
+            <p class="card-text">Integrated with Firebase to send real-time billing alerts and service updates to customers.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">🎨 UI/UX Design</h5>
+            <p class="card-text">Prototyped with Figma and implemented into clean, responsive UI using Laravel Blade and Bootstrap.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tantangan -->
+<section class="container py-5" data-aos="fade-up">
+  <h2>⚠ Challenges Faced</h2>
+  <ul>
+    <li><strong>Multi-account management:</strong> Ensuring one customer can manage multiple billing numbers with different invoices.</li>
+    <li><strong>Real-time notification system:</strong> Integrating FCM with Laravel for smooth delivery of push messages.</li>
+    <li><strong>Responsive design:</strong> Making sure the layout works perfectly across desktop and mobile views.</li>
+  </ul>
+</section>
+
+<!-- Teknologi yang Digunakan -->
+<section class="container py-5 text-center" data-aos="fade-up">
+  <h2>🛠 Technologies Used</h2>
+  <p>This project was developed using:</p>
+  <ul class="list-inline">
+    <li class="list-inline-item badge bg-primary">Laravel</li>
+    <li class="list-inline-item badge bg-secondary">MySQL</li>
+    <li class="list-inline-item badge bg-success">Firebase</li>
+    <li class="list-inline-item badge bg-danger">Figma</li>
+    <li class="list-inline-item badge bg-warning text-dark">Bootstrap</li>
+    <li class="list-inline-item badge bg-info text-dark">Blade Templates</li>
+  </ul>
+</section>
+
+<!-- Dokumentasi Visual -->
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 data-aos="fade-right">📸 Visual Showcase</h2>
+    <div class="row">
+      <div class="col-md-6" data-aos="zoom-in-up">
+        <img src="../images/dashboard-project3.jpg" class="img-fluid rounded mb-3" alt="Billing Dashboard">
+      </div>
+      <div class="col-md-6" data-aos="zoom-in-up" data-aos-delay="100">
+        <img src="../images/support-project3.jpg" class="img-fluid rounded mb-3" alt="Billing Invoice View">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tombol Kembali -->
+<div class="text-center mb-5" data-aos="fade-up">
+  <a href="../index.html" class="btn btn-secondary">🔙 Back to Portfolio</a>
+</div>
+
+<!-- Footer -->
+<footer class="text-center text-white bg-primary py-3">
+  <p>&copy; 2025 Raisul Agung Prabankoro</p>
+</footer>
+
+<!-- JS Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
+</body>
+</html>

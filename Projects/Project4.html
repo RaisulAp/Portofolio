@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Customer Billing Mobile App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    body {
+      background-color: #f9fafe;
+    }
+
+    section h2 {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    img.img-fluid {
+      transition: transform 0.4s ease-in-out;
+    }
+
+    img.img-fluid:hover {
+      transform: scale(1.03);
+    }
+
+    .badge {
+      font-size: 1rem;
+      padding: 0.6em 1em;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div id="navbar-placeholder"></div>
+<script>
+  fetch('../componens/navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+    });
+</script>
+
+<!-- Header -->
+<header class="text-center py-5" style="background: linear-gradient(to right, #2b4f81, #3c6e91); color: white;" data-aos="fade-down">
+  <h1 class="display-4">Customer Billing Mobile App</h1>
+  <p class="lead">Cross-platform mobile application for ISP customers built with Flutter</p>
+</header>
+
+<!-- Deskripsi Proyek -->
+<section class="container py-5" data-aos="fade-up">
+  <h2>📌 Project Overview</h2>
+  <p>
+    A mobile version of the ISP Customer Billing system developed using <strong>Flutter</strong> to provide a responsive and accessible experience for Android users.
+    This application connects to the same backend used in the web version (Laravel) and allows users to view bills, monitor payment history, and receive push notifications.
+    API endpoints were custom built for mobile integration and the UI was carefully designed for usability and speed.
+  </p>
+</section>
+
+<!-- Fitur Utama -->
+<section class="bg-light py-5">
+  <div class="container" data-aos="fade-up">
+    <h2>📱 Key Features</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">📄 Bill Overview</h5>
+            <p class="card-text">Displays current and past bills by billing number, with dynamic formatting and status indicators.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">🔗 API Integration</h5>
+            <p class="card-text">Connected to the Laravel backend using RESTful APIs for real-time and secure data access.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">📲 Push Notifications</h5>
+            <p class="card-text">Integrated with Firebase Cloud Messaging to send timely billing reminders and service alerts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tantangan -->
+<section class="container py-5" data-aos="fade-up">
+  <h2>⚠ Challenges Faced</h2>
+  <ul>
+    <li><strong>Mobile-first design:</strong> Creating a responsive and intuitive layout that works seamlessly on Android devices.</li>
+    <li><strong>API development:</strong> Building efficient API endpoints to serve mobile-specific data from the Laravel backend.</li>
+    <li><strong>Cross-platform architecture:</strong> Planning for future iOS support while starting with Android deployment.</li>
+  </ul>
+</section>
+
+<!-- Teknologi -->
+<section class="container py-5 text-center" data-aos="zoom-in">
+  <h2>🛠 Technologies Used</h2>
+  <p>This project was developed using:</p>
+  <ul class="list-inline">
+    <li class="list-inline-item badge bg-primary">Flutter</li>
+    <li class="list-inline-item badge bg-success">Dart</li>
+    <li class="list-inline-item badge bg-warning text-dark">Laravel API</li>
+    <li class="list-inline-item badge bg-danger">Firebase</li>
+    <li class="list-inline-item badge bg-info text-dark">Figma</li>
+    <li class="list-inline-item badge bg-secondary">Android SDK</li>
+  </ul>
+</section>
+
+<!-- Visual Showcase -->
+<section class="bg-light py-5">
+  <div class="container" data-aos="fade-up">
+    <h2>📸 Visual Showcase</h2>
+    <div class="row text-center">
+      <div class="col-6 col-md-3 mb-3">
+        <img src="../images/dashboard-project4.jpg" class="img-fluid rounded mx-auto d-block w-75" alt="Mobile Billing Home Page" />
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <img src="../images/invoice-project4.jpg" class="img-fluid rounded mx-auto d-block w-75" alt="Billing Detail View" />
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <img src="../images/home-project4.jpg" class="img-fluid rounded mx-auto d-block w-75" alt="Mobile Billing Home Page" />
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <img src="../images/ticket-project4.jpg" class="img-fluid rounded mx-auto d-block w-75" alt="Billing Detail View" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Back to Portfolio -->
+<div class="text-center mb-5" data-aos="fade-up">
+  <a href="../index.html" class="btn btn-secondary">🔙 Back to Portfolio</a>
+</div>
+
+<!-- Footer -->
+<footer class="text-center text-white bg-primary py-3">
+  <p>&copy; 2025 Raisul Agung Prabankoro</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
